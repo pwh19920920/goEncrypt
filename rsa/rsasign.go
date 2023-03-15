@@ -9,8 +9,8 @@ import (
 	"encoding/hex"
 	"runtime"
 
+	"github.com/pwh19920920/goEncrypt/hash"
 	log "github.com/sirupsen/logrus"
-	"github.com/wumansgy/goEncrypt/hash"
 )
 
 func rsaSign(msg, priKey []byte) (sign []byte, err error) {

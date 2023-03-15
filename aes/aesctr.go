@@ -7,13 +7,14 @@ import (
 	"encoding/hex"
 	"runtime"
 
+	"github.com/pwh19920920/goEncrypt"
 	log "github.com/sirupsen/logrus"
-	"github.com/wumansgy/goEncrypt"
 )
 
 /*
 	AES CTR mode encryption and decryption
 */
+
 func AesCtrEncrypt(plainText, secretKey, ivAes []byte) (cipherText []byte, err error) {
 	if len(secretKey) != 16 && len(secretKey) != 24 && len(secretKey) != 32 {
 		return nil, goEncrypt.ErrKeyLengthSixteen
