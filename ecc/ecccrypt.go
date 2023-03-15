@@ -11,11 +11,6 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-func init() {
-	log.SetFormatter(&log.JSONFormatter{})
-	log.SetReportCaller(true)
-}
-
 // The public key and plaintext are passed in for encryption
 func eccEncrypt(plainText, pubKey []byte) (cipherText []byte, err error) {
 	defer func() {

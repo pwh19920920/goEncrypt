@@ -15,10 +15,6 @@ import (
 /*
 	Operation with rsa encryption
 */
-func init() {
-	log.SetFormatter(&log.JSONFormatter{})
-	log.SetReportCaller(true)
-}
 
 func rsaEncrypt(plainText, publicKey []byte) (cipherText []byte, err error) {
 	defer func() {

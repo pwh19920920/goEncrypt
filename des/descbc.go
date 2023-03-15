@@ -16,10 +16,6 @@ import (
 	DES CBC mode encryption and decryption, is an 8-byte block encryption
 	If the group is not an integer multiple of 8, you need to consider completing the 8 bits2.
 */
-func init() {
-	log.SetFormatter(&log.JSONFormatter{})
-	log.SetReportCaller(true)
-}
 
 func DesCbcEncrypt(plainText, secretKey, ivDes []byte) (cipherText []byte, err error) {
 	if len(secretKey) != 8 {

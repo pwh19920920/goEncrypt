@@ -16,11 +16,6 @@ eencrypt
 	Note: the key length is 16 bytes
 */
 
-func init() {
-	log.SetFormatter(&log.JSONFormatter{})
-	log.SetReportCaller(true)
-}
-
 // encrypt
 func AesCbcEncrypt(plainText, secretKey, ivAes []byte) (cipherText []byte, err error) {
 	if len(secretKey) != 16 && len(secretKey) != 24 && len(secretKey) != 32 {
